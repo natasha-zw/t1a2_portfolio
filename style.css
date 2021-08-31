@@ -44,23 +44,20 @@
   font-family: Ubuntu;
   font-weight: 500;
 }
-#title-page-component button {
+#title-page-component a {
   font-family: Ubuntu;
+  text-decoration: none;
+  color: #000000;
+  padding-top: 0.5rem;
   border: none;
   height: 2rem;
   min-width: 5rem;
   box-shadow: 5px 10px 2px #F7CEDF;
   background-color: white;
   background-position: center;
-  transition: background 0.6s;
 }
-#title-page-component button:hover {
-  background: #FFF099 radial-gradient(circle, transparent 1%, #FFF099 1%) center/15000%;
-}
-#title-page-component button:active {
-  background-color: white;
-  background-size: 100%;
-  transition: background 0s;
+#title-page-component a:active {
+  background-color: #FFF099;
 }
 
 /*Media Query for tablets and ipads*/
@@ -68,6 +65,10 @@
   #title-page-component {
     margin: 0 8rem;
     padding: 1rem;
+  }
+
+  a:active {
+    background-color: #FFF099;
   }
 }
 /*Media Query for desktops*/
@@ -83,11 +84,21 @@
   #title-page-component h3 {
     font-size: 1.5rem;
   }
-  #title-page-component button {
+  #title-page-component a {
     margin: 2rem 0;
     font-size: 1.5rem;
     height: 4rem;
     width: 10rem;
+    padding-top: 1.3rem;
+    transition: width 1.5s;
+  }
+  #title-page-component a:hover {
+    background-color: #FFF099;
+    width: 15rem;
+    height: 5rem;
+  }
+  #title-page-component a:active {
+    background-color: #FFF099;
   }
 }
 
