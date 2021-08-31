@@ -12,6 +12,7 @@ $paragraph-text-color: #000000;
 
 #title-page-grid{
     height: 100vh;
+    max-width: 2000px;
     display: grid;
     grid-template-areas: "top top"
                         "middle middle"
@@ -26,6 +27,7 @@ $paragraph-text-color: #000000;
 
 #title-page-component{
     grid-area: middle;
+    box-shadow: 3px 5px 3px $primary-accent-color;
     // border: solid 3px $primary-accent-color;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -37,18 +39,30 @@ $paragraph-text-color: #000000;
     text-align: center;
     align-items: center;
     margin: 2rem;
+    padding: 1rem;
 
     h1, h3 {
         width:100%;
     }
+    h1 {
+        font-family: "patrick hand";
+        font-weight:700;
+        font-size: 3rem;
+        padding: 0 2rem;
+    }
+    h3{
+        font-family: Ubuntu;
+        font-weight: 500;
+    }
     button{
+        font-family: Ubuntu;
         border: none;
         height: 2rem;
         min-width: 5rem;
         box-shadow: 5px 10px 2px $primary-color;
         background-color:white;
         background-position: center;
-        transition: background 0.7s;
+        transition: background 0.6s;
         &:hover{
             background: $primary-accent-color  radial-gradient(circle, transparent 1%, $primary-accent-color 1%) center/15000%;
 
@@ -63,5 +77,42 @@ $paragraph-text-color: #000000;
     
 }
 
+
+
+
+/*Media Query for tablets and ipads*/
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+    #title-page-component{
+        margin: 0 8rem;
+        padding: 1rem;
+        
+    }
+    
+}
+
+
+/*Media Query for desktops*/
+@media only screen and (min-width: 981px) and (max-width: 2800px) {
+    #title-page-component{
+        margin: 0 auto;
+        max-width: 800px;
+
+        h1{
+            font-size: 3rem;
+            padding: 0 ;
+        }
+        h3 {
+            font-size: 1.5rem;
+           
+        }
+        button{
+            margin: 2rem 0;
+            font-size: 1.5rem;
+            height: 4rem;
+            width: 10rem;
+        }
+    }
+    
+}
 
 
