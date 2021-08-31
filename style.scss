@@ -1,0 +1,67 @@
+$primary-color: #F7CEDF;
+$secondary-color: #BDDDEF;
+$primary-accent-color: #FFF099;
+$secondary-accent-color: #CAE5E4;
+$paragraph-text-color: #000000;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#title-page-grid{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "top top"
+                        "middle middle"
+                        "bottom bottom";
+    background-image: url(/site_images/purple-yukata.jpg);
+    background-color: $primary-color;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#title-page-component{
+    grid-area: middle;
+    // border: solid 3px $primary-accent-color;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba($color: white
+    , $alpha: 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin: 2rem;
+
+    h1, h3 {
+        width:100%;
+    }
+    button{
+        border: none;
+        height: 2rem;
+        min-width: 5rem;
+        box-shadow: 5px 10px 2px $primary-color;
+        background-color:white;
+        background-position: center;
+        transition: background 0.7s;
+        &:hover{
+            background: $primary-accent-color  radial-gradient(circle, transparent 1%, $primary-accent-color 1%) center/15000%;
+
+        }
+        &:active{
+            background-color: white;
+            background-size: 100%;
+            transition: background 0s;
+        }
+    }
+
+    
+}
+
+
+
