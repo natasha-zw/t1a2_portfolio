@@ -17,7 +17,7 @@ $paragraph-text-color: #000000;
     grid-template-areas: "top top"
                         "middle middle"
                         "bottom bottom";
-    background-image: url(/site_images/purple-yukata.jpg);
+    background-image: url(/site_images/teamlab-lights-pink.jpg);
     background-color: $primary-color;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -54,25 +54,158 @@ $paragraph-text-color: #000000;
         font-family: Ubuntu;
         font-weight: 500;
     }
-    a{
-        font-family: Ubuntu;
-        text-decoration: none;
-        color:$paragraph-text-color;
+    .primary-button{
         padding-top: 0.5rem;
-        border: none;
-        height: 2rem;
+        min-height: 2rem;
         min-width: 5rem;
-        box-shadow: 5px 10px 2px $primary-color;
-        background-color:white;
-        background-position: center;
-        &:active{
-            background-color: $primary-accent-color;
-        }
-        }
-        
-        
+
     }
     
+}
+
+.primary-button{
+    font-family: Ubuntu;
+    text-decoration: none;
+    color:$paragraph-text-color;
+    border: none;
+    box-shadow: 5px 10px 2px $primary-color;
+    background-color:white;
+    background-position: center;
+    &:active{
+        
+        background-color: $primary-accent-color;
+    }
+}
+#about-page-grid{
+    display: grid;
+    grid-template-areas: "nav"
+                        "header"
+                        "intro-image" "intro-text"
+                        "intro-text"
+                        "work-education"
+                        "hobbies" "hobbies"
+                        "resume" "back-to-top"
+                        "footer";
+
+}
+
+    
+#top-of-page-nav{
+    grid-area: nav ;
+    display:flex;
+    width: 100%;
+    height: 4rem;
+
+    
+    #nav-icon{
+        
+        display: none;
+    }
+
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        li{
+            border-right: solid 4px $primary-color;
+            padding-right: 0.2rem;
+            &:last-child{
+                border: none;
+            }
+        }
+        
+    }
+
+}
+header {
+    #about-me-title{
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }
+}
+
+#about-main-container{
+    margin: 0 1rem;
+}
+
+#introduction{
+    display: inline-flex;
+    flex-wrap: wrap;
+    img{
+        grid-area: intro-image;
+        max-width: 8rem;
+        max-height: 9rem;
+        border: solid 2px orange;
+    }
+    p{
+        grid-area: intro-text;
+        font-size: 1rem;
+        width: 60%;
+        margin-left: 0.5rem;
+        text-align: left;
+        &:last-child{
+            width:100%;
+        }
+
+    }
+}
+
+#work-history-education{
+    grid-area: work-education;
+    h2{
+        margin-top: 3rem;
+    }
+}
+// #about-page-buttons{
+//     display: flex;
+//     flex-wrap: wrap;
+//     border: solid 2px orange;
+    
+// }
+
+#about-page-buttons{
+    height:100%;
+}
+#resume-button{
+    grid-area: resume;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    height: 100%;
+    
+}
+#back-to-top-button{
+    grid-area: back-to-top;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+}
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    border: solid 2px orange;
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    #linkedin-icon{
+        width: 10px;
+        height: 5px;
+    }
+
+}
+
+
+   
+    
+
+
+
 
 
 
@@ -85,7 +218,7 @@ $paragraph-text-color: #000000;
         
     }
     
-    a:active{
+    primary-button:active{
         background-color: $primary-accent-color; 
     }
 }
@@ -105,22 +238,38 @@ $paragraph-text-color: #000000;
             font-size: 1.5rem;
            
         }
-        a{
-            margin: 2rem 0;
-            font-size: 1.5rem;
-            height: 4rem;
-            width: 10rem;
-            padding-top: 1.3rem;
-            transition: width 1.5s;
-            &:hover{
-                background-color: $primary-accent-color;
-                width: 15rem;
-                height: 5rem;
-             }
-             &:active{
-                 background-color: $primary-accent-color; 
-             }
+    }
+    .primary-button{
+        margin: 2rem 0;
+        font-size: 1.5rem;
+        height: 4rem;
+        width: 10rem;
+        padding-top: 1.3rem;
+        transform: perspective(500px)translateZ(0px);
+        transition: transform 0.2s ease-in ;
+        box-shadow: none;
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            box-shadow: 5px 10px  $primary-color;
+            transition: all 0.3s ease-in-out;
+            
         }
+        &:hover{
+            transform: perspective(500px) translatey(-30px)translateZ(100px);
+            
+         }
+         &:hover::after{
+             opacity: 1;
+             transform: translateX(-100px);
+         }
+         &:active{
+             background-color: $primary-accent-color; 
+         }
     }
     
 }

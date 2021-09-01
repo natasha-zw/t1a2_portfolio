@@ -9,7 +9,7 @@
   max-width: 2000px;
   display: grid;
   grid-template-areas: "top top" "middle middle" "bottom bottom";
-  background-image: url(/site_images/purple-yukata.jpg);
+  background-image: url(/site_images/teamlab-lights-pink.jpg);
   background-color: #F7CEDF;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -44,20 +44,124 @@
   font-family: Ubuntu;
   font-weight: 500;
 }
-#title-page-component a {
+#title-page-component .primary-button {
+  padding-top: 0.5rem;
+  min-height: 2rem;
+  min-width: 5rem;
+}
+
+.primary-button {
   font-family: Ubuntu;
   text-decoration: none;
   color: #000000;
-  padding-top: 0.5rem;
   border: none;
-  height: 2rem;
-  min-width: 5rem;
   box-shadow: 5px 10px 2px #F7CEDF;
   background-color: white;
   background-position: center;
 }
-#title-page-component a:active {
+.primary-button:active {
   background-color: #FFF099;
+}
+
+#about-page-grid {
+  display: grid;
+  grid-template-areas: "nav" "header" "intro-image" "intro-text" "intro-text" "work-education" "hobbies" "hobbies" "resume" "back-to-top" "footer";
+}
+
+#top-of-page-nav {
+  grid-area: nav;
+  display: flex;
+  width: 100%;
+  height: 4rem;
+}
+#top-of-page-nav #nav-icon {
+  display: none;
+}
+#top-of-page-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+#top-of-page-nav ul li {
+  border-right: solid 4px #F7CEDF;
+  padding-right: 0.2rem;
+}
+#top-of-page-nav ul li:last-child {
+  border: none;
+}
+
+header #about-me-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+#about-main-container {
+  margin: 0 1rem;
+}
+
+#introduction {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+#introduction img {
+  grid-area: intro-image;
+  max-width: 8rem;
+  max-height: 9rem;
+  border: solid 2px orange;
+}
+#introduction p {
+  grid-area: intro-text;
+  font-size: 1rem;
+  width: 60%;
+  margin-left: 0.5rem;
+  text-align: left;
+}
+#introduction p:last-child {
+  width: 100%;
+}
+
+#work-history-education {
+  grid-area: work-education;
+}
+#work-history-education h2 {
+  margin-top: 3rem;
+}
+
+#about-page-buttons {
+  height: 100%;
+}
+
+#resume-button {
+  grid-area: resume;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  height: 100%;
+}
+
+#back-to-top-button {
+  grid-area: back-to-top;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  display: flex;
+  border: solid 2px orange;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+footer #linkedin-icon {
+  width: 10px;
+  height: 5px;
 }
 
 /*Media Query for tablets and ipads*/
@@ -67,7 +171,7 @@
     padding: 1rem;
   }
 
-  a:active {
+  primary-button:active {
     background-color: #FFF099;
   }
 }
@@ -84,20 +188,35 @@
   #title-page-component h3 {
     font-size: 1.5rem;
   }
-  #title-page-component a {
+
+  .primary-button {
     margin: 2rem 0;
     font-size: 1.5rem;
     height: 4rem;
     width: 10rem;
     padding-top: 1.3rem;
-    transition: width 1.5s;
+    transform: perspective(500px) translateZ(0px);
+    transition: transform 0.2s ease-in;
+    box-shadow: none;
   }
-  #title-page-component a:hover {
-    background-color: #FFF099;
-    width: 15rem;
-    height: 5rem;
+  .primary-button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    box-shadow: 5px 10px #F7CEDF;
+    transition: all 0.3s ease-in-out;
   }
-  #title-page-component a:active {
+  .primary-button:hover {
+    transform: perspective(500px) translatey(-30px) translateZ(100px);
+  }
+  .primary-button:hover::after {
+    opacity: 1;
+    transform: translateX(-100px);
+  }
+  .primary-button:active {
     background-color: #FFF099;
   }
 }
