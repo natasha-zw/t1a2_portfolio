@@ -1,9 +1,11 @@
+/*Import of global colours*/
 @use 'style' with ($primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
 $secondary-accent-color: #CAE5E4,
 $paragraph-text-color: #000000);
 
+/*Page content container styling*/
 #contact-grid-container{
     height: 100vw;
     display: flex;
@@ -17,54 +19,60 @@ $paragraph-text-color: #000000);
     //                     "back-to-top"
     //                     "footer";
 
-    &:nth-child(2){
-        flex: 1
-    }
+}
 
-    img, h1, nav, #contact-info-container, #back-to-top-button, footer{
+img, h1, nav, #contact-info-container, #back-to-top-button, footer{
         width: 100%;
-    } 
+} 
 
-    #contact-banner-img{
+/*Title and banner styling*/
+#contact-banner-img{
         // grid-area: header;
         
         opacity: 0.8;
-    }
-    h1 {
+}
+    
+h1 {
         // grid-area: title;
         margin: 2rem 0;
         text-align: center;
-        // text-shadow: style.textShadow(0.25, 6, style.$primary-accent-color);
+        
+}
+
+/*Page content container styling*/
+#contact-info-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5rem 4rem;
+    text-align: center;
+    background-image: linear-gradient(to top, #fff099, #ffe5bd, #ffe8ea, #fff5ff, #ffffff);
+    h3{
+        text-align: middle;
     }
-    #contact-info-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 5rem 4rem;
-        text-align: center;
-        background-image: linear-gradient(to top, #fff099, #ffe5bd, #ffe8ea, #fff5ff, #ffffff);
-        h3{
-            text-align: middle;
-        }
-        a {
-            text-decoration: underline;
-            font-family: sans-serif;
-            color: style.$paragraph-text-color;
-        }
-    }
-    #back-top-button{
-        display: none;
-        width: 50%;
-        background-image: style.$primary-accent-color;
-        text-align: end;
-        text-decoration: none;
+    a {
+        text-decoration: underline;
+        font-family: sans-serif;
         color: style.$paragraph-text-color;
     }
-    #parallax-waves{
-        width: 100%;
-    }
-
 }
+
+/*Back to top button styling*/
+#back-top-button{
+    display: none;
+    width: 50%;
+    background-image: style.$primary-accent-color;
+    text-align: end;
+    text-decoration: none;
+    color: style.$paragraph-text-color;
+}
+
+/*Parallax waves styling*/
+#parallax-waves{
+    width: 100%;
+}
+
+
 .waves {
     position:relative;
     width: 100%;
@@ -83,18 +91,28 @@ $paragraph-text-color: #000000);
   .parallax > use:nth-child(1) {
     animation-delay: -2s;
     animation-duration: 7s;
+    fill: style.$secondary-accent-color;
+    opacity: 0.2;
+    
   }
   .parallax > use:nth-child(2) {
     animation-delay: -3s;
     animation-duration: 10s;
+    fill: style.$secondary-accent-color;
+    opacity: 0.6;
+    
   }
   .parallax > use:nth-child(3) {
     animation-delay: -4s;
     animation-duration: 13s;
+    fill: style.$secondary-accent-color;
+    opacity: 0.8;
   }
   .parallax > use:nth-child(4) {
     animation-delay: -5s;
     animation-duration: 20s;
+    
+    
   }
   @keyframes move-forever {
     0% {
@@ -108,6 +126,7 @@ $paragraph-text-color: #000000);
 
 /*Media Query for tablets and ipads*/
 @media only screen and (min-width: 481px) and (max-width: 980px) {
+    /*Change in order for banner and nav bar */
     #contact-banner-img{
         order: -2;
         max-height: 25rem;
@@ -116,10 +135,13 @@ $paragraph-text-color: #000000);
         order: -1;
         padding-top: 3rem;
     }
+
+    /*title styling */
     h1{
         padding-top: 5rem;
     }
 
+    /*contact info container styling */
     #contact-info-container{
         h3, p, a {
             width: 20rem;
@@ -127,6 +149,7 @@ $paragraph-text-color: #000000);
     
     }
 
+    /*footer styling*/
     footer{
         width: 100%
     }
@@ -136,7 +159,7 @@ $paragraph-text-color: #000000);
 /*Media Query for desktops*/
 @media only screen and (min-width: 981px) and (max-width: 2800px) {
     
-    
+    /*Banner styling adding text overlay of title */
     #contact-banner-img{
         max-height: 35rem;
         width: 100%;
@@ -157,11 +180,12 @@ $paragraph-text-color: #000000);
         // }
     }
 
+    /*Title styling adjust for desktop*/
     h1{
         display: none;
     }
    
-   
+    /*Contact info container styling adjust for desktop*/
     #contact-info-container{
         justify-content: space-evenly;
         align-content: stretch;
@@ -174,10 +198,12 @@ $paragraph-text-color: #000000);
         }
     
     }
+
+    /*Parallax waves styling adjust for desktop*/
     .waves{
         height: 100%;
     }
-
+    
     #parallax-waves {
         height: 20%;
     }

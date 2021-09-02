@@ -1,9 +1,11 @@
+/*Global colours*/
 $primary-color: #F7CEDF !default;
 $secondary-color: #BDDDEF !default;
 $primary-accent-color: #FFF099 !default;
 $secondary-accent-color: #CAE5E4 !default;
 $paragraph-text-color: #000000 !default;
 
+/*Text shadow for headings, 3d effect*/
 @function textShadow($precision, $size, $color){
     $value: null;
     $offset: 0;
@@ -18,17 +20,19 @@ $paragraph-text-color: #000000 !default;
     @return $value;
   }
 
+  /*Page reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*Global nav bar styling */
 #top-of-page-nav{
     display: flex;
     grid-area: nav;
-    width: 100%;
-    height: 4rem;
+    width: 100vw;
+    height: 7rem;
     justify-content: space-around;
 
     
@@ -52,6 +56,7 @@ $paragraph-text-color: #000000 !default;
                 text-decoration: none;
                 color: black;
                 padding-right: 0.5rem;
+                font-family: sans-serif;
             }
         }
         
@@ -59,6 +64,7 @@ $paragraph-text-color: #000000 !default;
 
 }
 
+/*Global primary button styling*/
 .primary-button{
     font-family: kanit;
     text-decoration: none;
@@ -70,7 +76,7 @@ $paragraph-text-color: #000000 !default;
 
 }
 
-
+/*Global footer styling*/
 footer{
     grid-area: footer;
     width: 100%;
@@ -105,6 +111,7 @@ footer{
     }
     p { 
         width: 30%;
+        text-align: start;
     }
     .github-icon{
         width:2.5rem;
@@ -115,12 +122,16 @@ footer{
 
 }
 
-h1{
+/*Global text styling*/
+.page-title{
     font-family: acme, sans-serif;
+    text-align: center;
+    font-size: 6rem;
 }
 
 h2{
     font-family: kanit, sans-serif ;
+    font-size: 3rem;
 }
 h3{
     font-family: kanit, sans-serif;
@@ -134,10 +145,10 @@ p{
 
 /*Media Query for desktops*/
 @media only screen and (min-width: 981px) and (max-width: 2800px) {
-
+    /*Global nav bar styling for desktop*/
     #top-of-page-nav{
-        li{
-            font-weight: 4rem;
+        a{
+            font-size: 1.5rem;
         }
     }
     #nav-icon{

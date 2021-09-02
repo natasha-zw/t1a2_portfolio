@@ -1,14 +1,18 @@
+/*Global colours*/
+/*Text shadow for headings, 3d effect*/
+/*Page reset*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*Global nav bar styling */
 #top-of-page-nav {
   display: flex;
   grid-area: nav;
-  width: 100%;
-  height: 4rem;
+  width: 100vw;
+  height: 7rem;
   justify-content: space-around;
 }
 #top-of-page-nav #nav-icon {
@@ -31,8 +35,10 @@
   text-decoration: none;
   color: black;
   padding-right: 0.5rem;
+  font-family: sans-serif;
 }
 
+/*Global primary button styling*/
 .primary-button {
   font-family: kanit;
   text-decoration: none;
@@ -43,6 +49,7 @@
   background-position: center;
 }
 
+/*Global footer styling*/
 footer {
   grid-area: footer;
   width: 100%;
@@ -74,6 +81,7 @@ footer ul a {
 }
 footer p {
   width: 30%;
+  text-align: start;
 }
 footer .github-icon {
   width: 2.5rem;
@@ -82,12 +90,16 @@ footer .linkedin-icon {
   width: 2.5rem;
 }
 
-h1 {
+/*Global text styling*/
+.page-title {
   font-family: acme, sans-serif;
+  text-align: center;
+  font-size: 6rem;
 }
 
 h2 {
   font-family: kanit, sans-serif;
+  font-size: 3rem;
 }
 
 h3 {
@@ -100,14 +112,26 @@ p {
 
 /*Media Query for desktops*/
 @media only screen and (min-width: 981px) and (max-width: 2800px) {
-  #top-of-page-nav li {
-    font-weight: 4rem;
+  /*Global nav bar styling for desktop*/
+  #top-of-page-nav a {
+    font-size: 1.5rem;
   }
 
   #nav-icon {
     width: 100%;
   }
 }
+/*Import of global colours*/
+body {
+  max-width: 1000px;
+}
+
+/*Global text styling*/
+p {
+  font-size: 0.8rem;
+}
+
+/*Page content container styling*/
 #grid-container {
   display: grid;
   max-width: 100vw;
@@ -115,13 +139,10 @@ p {
   grid-template-areas: "nav nav" "nav nav" "intro intro" "work work" "work work" "fun fun" "resume resume" "footer footer";
 }
 
+/*Nav and title and profile image */
 #header-flex-container {
   grid-area: nav;
-  height: 5rem;
-}
-#header-flex-container #page-title {
-  text-align: center;
-  font-family: acme, sans-serif;
+  height: 100%;
 }
 
 #introduction, #fun-stuff, #about-page-buttons {
@@ -134,17 +155,32 @@ p {
   flex-wrap: wrap;
 }
 #introduction #profile-photo {
-  width: 10rem;
+  max-width: 14rem;
+  max-height: 20rem;
   margin: 20px auto;
   border-radius: 20px;
   box-shadow: 10px 5px 2px #F7CEDF;
 }
+#introduction p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 
+h1 {
+  border-radius: 16% 84% 14% 86%/73% 16% 84% 27%;
+  height: 100%;
+  background-color: #CAE5E4;
+}
+
+/*Work and education section*/
 #work-history-education {
   grid-area: work;
 }
-#work-history-education h2 {
-  padding-top: 10px;
+#work-history-education h3 {
+  margin: 3rem;
+  text-align: center;
 }
 
 #work-history-education {
@@ -168,28 +204,41 @@ p {
     background-position: 0% 50%;
   }
 }
+/*Fun stuff area*/
 #fun-stuff {
   grid-area: fun;
-}
-#fun-stuff #stack-graph {
-  width: 18rem;
-  margin-top: 2rem;
+  height: 30%;
+  background-color: #CAE5E4;
+  border-radius: 13% 87% 10% 90%/83% 14% 86% 17%;
 }
 #fun-stuff h2 {
+  padding: 3rem 0;
   text-align: center;
-  height: 5rem;
+  text-shadow: 0.25px 0.25px #FFF099, 0.5px 0.5px #FFF099, 0.75px 0.75px #FFF099, 1px 1px #FFF099, 1.25px 1.25px #FFF099, 1.5px 1.5px #FFF099, 1.75px 1.75px #FFF099, 2px 2px #FFF099, 2.25px 2.25px #FFF099, 2.5px 2.5px #FFF099, 2.75px 2.75px #FFF099, 3px 3px #FFF099, 3.25px 3.25px #FFF099, 3.5px 3.5px #FFF099, 3.75px 3.75px #FFF099, 4px 4px #FFF099, 4.25px 4.25px #FFF099, 4.5px 4.5px #FFF099, 4.75px 4.75px #FFF099, 5px 5px #FFF099, 5.25px 5.25px #FFF099, 5.5px 5.5px #FFF099, 5.75px 5.75px #FFF099, 6px 6px #FFF099;
 }
 #fun-stuff #card-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  perspective: 50em;
 }
-#fun-stuff #card-images #cake-image, #fun-stuff #card-images #korea-landscape-image, #fun-stuff #card-images #reading-image {
+#fun-stuff #card-images #cake-image, #fun-stuff #card-images #reading-image {
   width: 7rem;
   padding: 3px;
   border-radius: 10px;
+  transform: rotateY(20deg);
+  box-shadow: -3px -1px 2px black;
+}
+#fun-stuff p {
+  margin: 3rem 2rem;
+  font-size: 1.2rem;
+}
+#fun-stuff #stack-graph {
+  width: 18rem;
+  margin: 1rem;
 }
 
+/*Resume button*/
 #about-page-buttons {
   grid-area: resume;
 }
@@ -198,8 +247,49 @@ p {
   border: dashed;
 }
 
-p {
-  font-size: 0.8rem;
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+  #introduction p {
+    margin: 0 3rem;
+  }
+
+  #work-history-education {
+    height: 50%;
+    margin: 4rem 0;
+  }
+
+  #fun-stuff #stack-graph {
+    width: 30rem;
+    margin: 0 7rem;
+  }
+}
+@media only screen and (min-width: 981px) and (max-width: 2800px) {
+  #introduction p {
+    margin: 0rem 9rem;
+    max-width: 70rem;
+  }
+
+  #work-history-education {
+    height: 50%;
+    max-width: 70rem;
+    margin: 3rem auto;
+  }
+
+  #fun-stuff #cake-image, #fun-stuff #reading-image {
+    height: 20rem;
+    width: 30rem;
+  }
+  #fun-stuff #cake-image:hover, #fun-stuff #reading-image:hover {
+    animation: card-select 3s infinite;
+  }
+
+  @keyframes card-select {
+    from {
+      transform: rotateY(20deg), translateY(0);
+    }
+    to {
+      transform: rotateY(-20deg), translateY(20deg);
+    }
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

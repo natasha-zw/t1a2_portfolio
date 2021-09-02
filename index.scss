@@ -1,9 +1,11 @@
+/*Import of global colours*/
 @use 'style' with ($primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
 $secondary-accent-color: #CAE5E4,
 $paragraph-text-color: #000000);
 
+/*Page content container styling*/
 #title-page-grid{
     height: 100vh;
     max-width: 2000px;
@@ -19,6 +21,7 @@ $paragraph-text-color: #000000);
     background-size: cover;
 }
 
+/*Page content styling*/
 #title-page-component{
     grid-area: middle;
     box-shadow: 3px 5px 3px style.$primary-accent-color;
@@ -61,12 +64,14 @@ $paragraph-text-color: #000000);
 
 /*Media Query for tablets and ipads*/
 @media only screen and (min-width: 481px) and (max-width: 980px) {
+    
+    /*Component container styling for tablet*/
     #title-page-component{
         margin: 0 8rem;
         padding: 1rem;
         
     }
-    
+    /*Button styling for tablet*/
     primary-button:active{
     box-shadow: 3px 5px 3px style.$primary-accent-color;
         background-color: style.$primary-accent-color; 
@@ -89,6 +94,8 @@ $paragraph-text-color: #000000);
            
         }
     }
+
+    /*Button styling for desktop*/
     .primary-button{
         margin: 2rem 0;
         font-size: 1.5rem;

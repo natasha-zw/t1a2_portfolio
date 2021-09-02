@@ -1,14 +1,18 @@
+/*Global colours*/
+/*Text shadow for headings, 3d effect*/
+/*Page reset*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*Global nav bar styling */
 #top-of-page-nav {
   display: flex;
   grid-area: nav;
-  width: 100%;
-  height: 4rem;
+  width: 100vw;
+  height: 7rem;
   justify-content: space-around;
 }
 #top-of-page-nav #nav-icon {
@@ -31,8 +35,10 @@
   text-decoration: none;
   color: black;
   padding-right: 0.5rem;
+  font-family: sans-serif;
 }
 
+/*Global primary button styling*/
 .primary-button {
   font-family: kanit;
   text-decoration: none;
@@ -43,6 +49,7 @@
   background-position: center;
 }
 
+/*Global footer styling*/
 footer {
   grid-area: footer;
   width: 100%;
@@ -74,6 +81,7 @@ footer ul a {
 }
 footer p {
   width: 30%;
+  text-align: start;
 }
 footer .github-icon {
   width: 2.5rem;
@@ -82,12 +90,16 @@ footer .linkedin-icon {
   width: 2.5rem;
 }
 
-h1 {
+/*Global text styling*/
+.page-title {
   font-family: acme, sans-serif;
+  text-align: center;
+  font-size: 6rem;
 }
 
 h2 {
   font-family: kanit, sans-serif;
+  font-size: 3rem;
 }
 
 h3 {
@@ -100,14 +112,17 @@ p {
 
 /*Media Query for desktops*/
 @media only screen and (min-width: 981px) and (max-width: 2800px) {
-  #top-of-page-nav li {
-    font-weight: 4rem;
+  /*Global nav bar styling for desktop*/
+  #top-of-page-nav a {
+    font-size: 1.5rem;
   }
 
   #nav-icon {
     width: 100%;
   }
 }
+/*Import of global colours*/
+/*Page content container styling*/
 #title-page-grid {
   height: 100vh;
   max-width: 2000px;
@@ -121,6 +136,7 @@ p {
   background-size: cover;
 }
 
+/*Page content styling*/
 #title-page-component {
   grid-area: middle;
   box-shadow: 3px 5px 3px #FFF099;
@@ -156,11 +172,13 @@ p {
 
 /*Media Query for tablets and ipads*/
 @media only screen and (min-width: 481px) and (max-width: 980px) {
+  /*Component container styling for tablet*/
   #title-page-component {
     margin: 0 8rem;
     padding: 1rem;
   }
 
+  /*Button styling for tablet*/
   primary-button:active {
     box-shadow: 3px 5px 3px #FFF099;
     background-color: #FFF099;
@@ -180,6 +198,7 @@ p {
     font-size: 1.5rem;
   }
 
+  /*Button styling for desktop*/
   .primary-button {
     margin: 2rem 0;
     font-size: 1.5rem;
