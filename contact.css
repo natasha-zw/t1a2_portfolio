@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#top-of-page-nav {
+  display: flex;
+  grid-area: nav;
+  width: 100%;
+  height: 4rem;
+  justify-content: space-around;
+}
+#top-of-page-nav #nav-icon {
+  display: none;
+}
+#top-of-page-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+#top-of-page-nav ul li {
+  border-right: solid 3px #F7CEDF;
+}
+#top-of-page-nav ul li:last-child {
+  border: none;
+}
+#top-of-page-nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding-right: 0.5rem;
+}
+
+.primary-button {
+  font-family: kanit;
+  text-decoration: none;
+  color: #000000;
+  border: none;
+  box-shadow: 5px 10px 2px #F7CEDF;
+  background-color: white;
+  background-position: center;
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  display: flex;
+  padding: 10px 7px;
+  margin: 0;
+  max-width: 100vw;
+}
+footer ul {
+  flex-wrap: wrap;
+}
+footer #footer-copyright {
+  font-size: 0.8rem;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+footer ul li {
+  width: 50%;
+}
+footer ul a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: #000000;
+}
+footer p {
+  width: 30%;
+}
+footer .github-icon {
+  width: 2.5rem;
+}
+footer .linkedin-icon {
+  width: 2.5rem;
+}
+
+h1 {
+  font-family: acme, sans-serif;
+}
+
+h2 {
+  font-family: kanit, sans-serif;
+}
+
+h3 {
+  font-family: kanit, sans-serif;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+/*Media Query for desktops*/
+@media only screen and (min-width: 981px) and (max-width: 2800px) {
+  #top-of-page-nav li {
+    font-weight: 4rem;
+  }
+
+  #nav-icon {
+    width: 100%;
+  }
+}
+#contact-grid-container {
+  height: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#contact-grid-container:nth-child(2) {
+  flex: 1;
+}
+#contact-grid-container img, #contact-grid-container h1, #contact-grid-container nav, #contact-grid-container #contact-info-container, #contact-grid-container #back-to-top-button, #contact-grid-container footer {
+  width: 100%;
+}
+#contact-grid-container #contact-banner-img {
+  opacity: 0.8;
+}
+#contact-grid-container h1 {
+  margin: 2rem 0;
+  text-align: center;
+}
+#contact-grid-container #contact-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5rem 4rem;
+  text-align: center;
+  background-image: linear-gradient(to top, #fff099, #ffe5bd, #ffe8ea, #fff5ff, #ffffff);
+}
+#contact-grid-container #contact-info-container h3 {
+  text-align: middle;
+}
+#contact-grid-container #contact-info-container a {
+  text-decoration: underline;
+  font-family: sans-serif;
+  color: #000000;
+}
+#contact-grid-container #back-top-button {
+  display: none;
+  width: 50%;
+  background-image: #FFF099;
+  text-align: end;
+  text-decoration: none;
+  color: #000000;
+}
+#contact-grid-container #parallax-waves {
+  width: 100%;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+  background-color: #FFF099;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Media Query for tablets and ipads*/
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+  #contact-banner-img {
+    order: -2;
+    max-height: 25rem;
+  }
+
+  nav {
+    order: -1;
+    padding-top: 3rem;
+  }
+
+  h1 {
+    padding-top: 5rem;
+  }
+
+  #contact-info-container h3, #contact-info-container p, #contact-info-container a {
+    width: 20rem;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+/*Media Query for desktops*/
+@media only screen and (min-width: 981px) and (max-width: 2800px) {
+  #contact-banner-img {
+    max-height: 35rem;
+    width: 100%;
+    position: relative;
+    opacity: 1;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  #contact-info-container {
+    justify-content: space-evenly;
+    align-content: stretch;
+    height: 35%;
+    align-items: center;
+  }
+  #contact-info-container #contact-email, #contact-info-container #contact-linkedin, #contact-info-container #contact-github {
+    width: 20rem;
+    height: fit-content;
+  }
+
+  .waves {
+    height: 100%;
+  }
+
+  #parallax-waves {
+    height: 20%;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */
