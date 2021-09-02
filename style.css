@@ -4,73 +4,9 @@
   box-sizing: border-box;
 }
 
-#title-page-grid {
-  height: 100vh;
-  max-width: 2000px;
-  display: grid;
-  grid-template-areas: "top top" "middle middle" "bottom bottom";
-  background-image: url(/site_images/teamlab-lights-pink.jpg);
-  background-color: #F7CEDF;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-
-#title-page-component {
-  grid-area: middle;
-  box-shadow: 3px 5px 3px #FFF099;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  margin: 2rem;
-  padding: 1rem;
-}
-#title-page-component h1, #title-page-component h3 {
-  width: 100%;
-}
-#title-page-component h1 {
-  font-family: "patrick hand";
-  font-weight: 700;
-  font-size: 3rem;
-  padding: 0 2rem;
-}
-#title-page-component h3 {
-  font-family: Ubuntu;
-  font-weight: 500;
-}
-#title-page-component .primary-button {
-  padding-top: 0.5rem;
-  min-height: 2rem;
-  min-width: 5rem;
-}
-
-.primary-button {
-  font-family: Ubuntu;
-  text-decoration: none;
-  color: #000000;
-  border: none;
-  box-shadow: 5px 10px 2px #F7CEDF;
-  background-color: white;
-  background-position: center;
-}
-.primary-button:active {
-  background-color: #FFF099;
-}
-
-#about-page-grid {
-  display: grid;
-  grid-template-areas: "nav" "header" "intro-image" "intro-text" "intro-text" "work-education" "hobbies" "hobbies" "resume" "back-to-top" "footer";
-}
-
 #top-of-page-nav {
+  display: grid;
   grid-area: nav;
-  display: flex;
   width: 100%;
   height: 4rem;
 }
@@ -85,140 +21,68 @@
   width: 100%;
 }
 #top-of-page-nav ul li {
-  border-right: solid 4px #F7CEDF;
-  padding-right: 0.2rem;
+  border-right: solid 3px #F7CEDF;
 }
 #top-of-page-nav ul li:last-child {
   border: none;
 }
-
-header #about-me-title {
-  text-align: center;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+#top-of-page-nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding-right: 0.5rem;
 }
 
-#about-main-container {
-  margin: 0 1rem;
-}
-
-#introduction {
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-#introduction img {
-  grid-area: intro-image;
-  max-width: 8rem;
-  max-height: 9rem;
-  border: solid 2px orange;
-}
-#introduction p {
-  grid-area: intro-text;
-  font-size: 1rem;
-  width: 60%;
-  margin-left: 0.5rem;
-  text-align: left;
-}
-#introduction p:last-child {
-  width: 100%;
-}
-
-#work-history-education {
-  grid-area: work-education;
-}
-#work-history-education h2 {
-  margin-top: 3rem;
-}
-
-#about-page-buttons {
-  height: 100%;
-}
-
-#resume-button {
-  grid-area: resume;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  height: 100%;
-}
-
-#back-to-top-button {
-  grid-area: back-to-top;
-  width: 100%;
-  height: 100%;
-  justify-self: center;
+.primary-button {
+  font-family: kanit;
+  text-decoration: none;
+  color: #000000;
+  border: none;
+  box-shadow: 5px 10px 2px #F7CEDF;
+  background-color: white;
+  background-position: center;
 }
 
 footer {
   grid-area: footer;
   width: 100%;
   display: flex;
-  border: solid 2px orange;
+  padding: 0 7px;
 }
 footer ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 40%;
 }
-footer #linkedin-icon {
-  width: 10px;
-  height: 5px;
+footer ul li {
+  width: 50%;
+}
+footer ul a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: #000000;
+}
+footer p {
+  width: 30%;
+}
+footer .github-icon {
+  width: 2.5rem;
+}
+footer .linkedin-icon {
+  width: 2.5rem;
 }
 
-/*Media Query for tablets and ipads*/
-@media only screen and (min-width: 481px) and (max-width: 980px) {
-  #title-page-component {
-    margin: 0 8rem;
-    padding: 1rem;
-  }
-
-  primary-button:active {
-    background-color: #FFF099;
-  }
+h1 {
+  font-family: acme;
 }
-/*Media Query for desktops*/
-@media only screen and (min-width: 981px) and (max-width: 2800px) {
-  #title-page-component {
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  #title-page-component h1 {
-    font-size: 3rem;
-    padding: 0;
-  }
-  #title-page-component h3 {
-    font-size: 1.5rem;
-  }
 
-  .primary-button {
-    margin: 2rem 0;
-    font-size: 1.5rem;
-    height: 4rem;
-    width: 10rem;
-    padding-top: 1.3rem;
-    transform: perspective(500px) translateZ(0px);
-    transition: transform 0.2s ease-in;
-    box-shadow: none;
-  }
-  .primary-button::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    box-shadow: 5px 10px #F7CEDF;
-    transition: all 0.3s ease-in-out;
-  }
-  .primary-button:hover {
-    transform: perspective(500px) translatey(-30px) translateZ(100px);
-  }
-  .primary-button:hover::after {
-    opacity: 1;
-    transform: translateX(-100px);
-  }
-  .primary-button:active {
-    background-color: #FFF099;
-  }
+h2 {
+  font-family: kanit;
+}
+
+p {
+  font-family: sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

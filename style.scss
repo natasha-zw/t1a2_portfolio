@@ -1,8 +1,8 @@
-$primary-color: #F7CEDF;
-$secondary-color: #BDDDEF;
-$primary-accent-color: #FFF099;
-$secondary-accent-color: #CAE5E4;
-$paragraph-text-color: #000000;
+$primary-color: #F7CEDF !default;
+$secondary-color: #BDDDEF !default;
+$primary-accent-color: #FFF099 !default;
+$secondary-accent-color: #CAE5E4 !default;
+$paragraph-text-color: #000000 !default;
 
 *{
     margin: 0;
@@ -10,89 +10,9 @@ $paragraph-text-color: #000000;
     box-sizing: border-box;
 }
 
-#title-page-grid{
-    height: 100vh;
-    max-width: 2000px;
-    display: grid;
-    grid-template-areas: "top top"
-                        "middle middle"
-                        "bottom bottom";
-    background-image: url(/site_images/teamlab-lights-pink.jpg);
-    background-color: $primary-color;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-#title-page-component{
-    grid-area: middle;
-    box-shadow: 3px 5px 3px $primary-accent-color;
-    // border: solid 3px $primary-accent-color;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: rgba($color: white
-    , $alpha: 0.7);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-    margin: 2rem;
-    padding: 1rem;
-
-    h1, h3 {
-        width:100%;
-    }
-    h1 {
-        font-family: "patrick hand";
-        font-weight:700;
-        font-size: 3rem;
-        padding: 0 2rem;
-    }
-    h3{
-        font-family: Ubuntu;
-        font-weight: 500;
-    }
-    .primary-button{
-        padding-top: 0.5rem;
-        min-height: 2rem;
-        min-width: 5rem;
-
-    }
-    
-}
-
-.primary-button{
-    font-family: Ubuntu;
-    text-decoration: none;
-    color:$paragraph-text-color;
-    border: none;
-    box-shadow: 5px 10px 2px $primary-color;
-    background-color:white;
-    background-position: center;
-    &:active{
-        
-        background-color: $primary-accent-color;
-    }
-}
-#about-page-grid{
-    display: grid;
-    grid-template-areas: "nav"
-                        "header"
-                        "intro-image" "intro-text"
-                        "intro-text"
-                        "work-education"
-                        "hobbies" "hobbies"
-                        "resume" "back-to-top"
-                        "footer";
-
-}
-
-    
 #top-of-page-nav{
-    grid-area: nav ;
-    display:flex;
+    display: grid;
+    grid-area: nav;
     width: 100%;
     height: 4rem;
 
@@ -109,98 +29,80 @@ $paragraph-text-color: #000000;
         align-items: center;
         width: 100%;
         li{
-            border-right: solid 4px $primary-color;
-            padding-right: 0.2rem;
+            border-right: solid 3px $primary-color;
+            
             &:last-child{
                 border: none;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                padding-right: 0.5rem;
             }
         }
         
     }
 
 }
-header {
-    #about-me-title{
-        text-align: center;
-        margin-bottom: 3rem;
-        margin-top: 2rem;
-    }
+
+.primary-button{
+    font-family: kanit;
+    text-decoration: none;
+    color:$paragraph-text-color;
+    border: none;
+    box-shadow: 5px 10px 2px $primary-color;
+    background-color:white;
+    background-position: center;
+
 }
 
-#about-main-container{
-    margin: 0 1rem;
-}
-
-#introduction{
-    display: inline-flex;
-    flex-wrap: wrap;
-    img{
-        grid-area: intro-image;
-        max-width: 8rem;
-        max-height: 9rem;
-        border: solid 2px orange;
-    }
-    p{
-        grid-area: intro-text;
-        font-size: 1rem;
-        width: 60%;
-        margin-left: 0.5rem;
-        text-align: left;
-        &:last-child{
-            width:100%;
-        }
-
-    }
-}
-
-#work-history-education{
-    grid-area: work-education;
-    h2{
-        margin-top: 3rem;
-    }
-}
-// #about-page-buttons{
-//     display: flex;
-//     flex-wrap: wrap;
-//     border: solid 2px orange;
-    
-// }
-
-#about-page-buttons{
-    height:100%;
-}
-#resume-button{
-    grid-area: resume;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    height: 100%;
-    
-}
-#back-to-top-button{
-    grid-area: back-to-top;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-}
 
 footer{
     grid-area: footer;
     width: 100%;
     display: flex;
-    border: solid 2px orange;
+    padding: 0 7px;
+    
     ul{
         list-style-type: none;
+        
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        width: 40%;
+        li{
+            width:50%;
+        }
+        a{
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            color: $paragraph-text-color
+            
+        }
     }
-    #linkedin-icon{
-        width: 10px;
-        height: 5px;
+    p { 
+        width: 30%;
+    }
+    .github-icon{
+        width:2.5rem;
+    }
+    .linkedin-icon{
+        width:2.5rem;
     }
 
 }
 
+h1{
+    font-family: acme;
+}
 
+h2{
+    font-family: kanit ;
+}
+
+p{
+    font-family: sans-serif;
+}
    
     
 
@@ -210,68 +112,6 @@ footer{
 
 
 
-/*Media Query for tablets and ipads*/
-@media only screen and (min-width: 481px) and (max-width: 980px) {
-    #title-page-component{
-        margin: 0 8rem;
-        padding: 1rem;
-        
-    }
-    
-    primary-button:active{
-        background-color: $primary-accent-color; 
-    }
-}
 
-
-/*Media Query for desktops*/
-@media only screen and (min-width: 981px) and (max-width: 2800px) {
-    #title-page-component{
-        margin: 0 auto;
-        max-width: 800px;
-
-        h1{
-            font-size: 3rem;
-            padding: 0 ;
-        }
-        h3 {
-            font-size: 1.5rem;
-           
-        }
-    }
-    .primary-button{
-        margin: 2rem 0;
-        font-size: 1.5rem;
-        height: 4rem;
-        width: 10rem;
-        padding-top: 1.3rem;
-        transform: perspective(500px)translateZ(0px);
-        transition: transform 0.2s ease-in ;
-        box-shadow: none;
-        &::after{
-            content: '';
-            position: absolute;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            box-shadow: 5px 10px  $primary-color;
-            transition: all 0.3s ease-in-out;
-            
-        }
-        &:hover{
-            transform: perspective(500px) translatey(-30px)translateZ(100px);
-            
-         }
-         &:hover::after{
-             opacity: 1;
-             transform: translateX(-100px);
-         }
-         &:active{
-             background-color: $primary-accent-color; 
-         }
-    }
-    
-}
 
 

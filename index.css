@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#top-of-page-nav {
+  display: grid;
+  grid-area: nav;
+  width: 100%;
+  height: 4rem;
+}
+#top-of-page-nav #nav-icon {
+  display: none;
+}
+#top-of-page-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+#top-of-page-nav ul li {
+  border-right: solid 3px #F7CEDF;
+}
+#top-of-page-nav ul li:last-child {
+  border: none;
+}
+#top-of-page-nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding-right: 0.5rem;
+}
+
+.primary-button {
+  font-family: kanit;
+  text-decoration: none;
+  color: #000000;
+  border: none;
+  box-shadow: 5px 10px 2px #F7CEDF;
+  background-color: white;
+  background-position: center;
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  display: flex;
+  padding: 0 7px;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+footer ul li {
+  width: 50%;
+}
+footer ul a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: #000000;
+}
+footer p {
+  width: 30%;
+}
+footer .github-icon {
+  width: 2.5rem;
+}
+footer .linkedin-icon {
+  width: 2.5rem;
+}
+
+h1 {
+  font-family: acme;
+}
+
+h2 {
+  font-family: kanit;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+#title-page-grid {
+  height: 100vh;
+  max-width: 2000px;
+  display: grid;
+  grid-template-areas: "top top" "middle middle" "bottom bottom";
+  background-image: url(/site_images/teamlab-lights-pink.jpg);
+  background-color: #F7CEDF;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#title-page-component {
+  grid-area: middle;
+  box-shadow: 3px 5px 3px #FFF099;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem;
+}
+#title-page-component h1, #title-page-component h3 {
+  width: 100%;
+}
+#title-page-component h1 {
+  font-family: acme, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 0 2rem;
+}
+#title-page-component h3 {
+  font-family: sans-serif;
+  font-weight: 500;
+}
+#title-page-component .primary-button {
+  padding-top: 0.5rem;
+  min-height: 2rem;
+  min-width: 5rem;
+}
+
+/*Media Query for tablets and ipads*/
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+  #title-page-component {
+    margin: 0 8rem;
+    padding: 1rem;
+  }
+
+  primary-button:active {
+    box-shadow: 3px 5px 3px #FFF099;
+    background-color: #FFF099;
+  }
+}
+/*Media Query for desktops*/
+@media only screen and (min-width: 981px) and (max-width: 2800px) {
+  #title-page-component {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  #title-page-component h1 {
+    font-size: 3rem;
+    padding: 0;
+  }
+  #title-page-component h3 {
+    font-size: 1.5rem;
+  }
+
+  .primary-button {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 10rem;
+    padding-top: 1.3rem;
+    transform: perspective(500px) translateZ(0px);
+    transition: transform 0.2s ease-in;
+    box-shadow: none;
+  }
+  .primary-button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    box-shadow: 5px 10px #F7CEDF;
+    transition: all 0.3s ease-in-out;
+  }
+  .primary-button:hover {
+    transform: perspective(500px) translatey(-30px) translateZ(100px);
+  }
+  .primary-button:hover::after {
+    opacity: 1;
+    transform: translateX(-100px);
+  }
+  .primary-button:active {
+    background-color: #FFF099;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

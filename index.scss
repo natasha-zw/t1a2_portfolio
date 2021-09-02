@@ -1,0 +1,123 @@
+@use 'style' with ($primary-color: #F7CEDF,
+$secondary-color: #BDDDEF,
+$primary-accent-color: #FFF099,
+$secondary-accent-color: #CAE5E4,
+$paragraph-text-color: #000000);
+
+#title-page-grid{
+    height: 100vh;
+    max-width: 2000px;
+    display: grid;
+    grid-template-areas: "top top"
+                        "middle middle"
+                        "bottom bottom";
+    background-image: url(/site_images/teamlab-lights-pink.jpg);
+    background-color: style.$primary-color;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#title-page-component{
+    grid-area: middle;
+    box-shadow: 3px 5px 3px style.$primary-accent-color;
+    // border: solid 3px $primary-accent-color;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba($color: white
+    , $alpha: 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin: 2rem;
+    padding: 1rem;
+
+    h1, h3 {
+        width:100%;
+    }
+    h1 {
+        font-family: acme, sans-serif;
+        font-weight:700;
+        font-size: 3rem;
+        padding: 0 2rem;
+    }
+    h3{
+        font-family: sans-serif;
+        font-weight: 500;
+    }
+    .primary-button{
+        padding-top: 0.5rem;
+        min-height: 2rem;
+        min-width: 5rem;
+
+    }
+    
+}
+
+/*Media Query for tablets and ipads*/
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+    #title-page-component{
+        margin: 0 8rem;
+        padding: 1rem;
+        
+    }
+    
+    primary-button:active{
+    box-shadow: 3px 5px 3px style.$primary-accent-color;
+        background-color: style.$primary-accent-color; 
+    }
+}
+
+
+/*Media Query for desktops*/
+@media only screen and (min-width: 981px) and (max-width: 2800px) {
+    #title-page-component{
+        margin: 0 auto;
+        max-width: 800px;
+
+        h1{
+            font-size: 3rem;
+            padding: 0 ;
+        }
+        h3 {
+            font-size: 1.5rem;
+           
+        }
+    }
+    .primary-button{
+        margin: 2rem 0;
+        font-size: 1.5rem;
+        height: 4rem;
+        width: 10rem;
+        padding-top: 1.3rem;
+        transform: perspective(500px)translateZ(0px);
+        transition: transform 0.2s ease-in ;
+        box-shadow: none;
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            box-shadow: 5px 10px  style.$primary-color;
+            transition: all 0.3s ease-in-out;
+            
+        }
+        &:hover{
+            transform: perspective(500px) translatey(-30px)translateZ(100px);
+            
+         }
+         &:hover::after{
+             opacity: 1;
+             transform: translateX(-100px);
+         }
+         &:active{
+             background-color: style.$primary-accent-color; 
+         }
+    }
+    
+}
