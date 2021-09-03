@@ -8,15 +8,16 @@
 }
 
 /*Global nav bar styling */
+#nav-icon {
+  display: none;
+}
+
 #top-of-page-nav {
   display: flex;
   grid-area: nav;
   width: 100vw;
   height: 7rem;
   justify-content: space-around;
-}
-#top-of-page-nav #nav-icon {
-  display: none;
 }
 #top-of-page-nav ul {
   list-style-type: none;
@@ -47,6 +48,24 @@
   box-shadow: 5px 10px 2px #F7CEDF;
   background-color: white;
   background-position: center;
+}
+
+/*Global back to top styling*/
+#back-top-button {
+  background-color: #F7CEDF;
+  height: 29px;
+  width: 50px;
+  border-radius: 45%;
+  text-align: center;
+  border: 3px solid #000000;
+  box-shadow: 2px 2px 1px #000000;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  color: #000000;
+  font-family: sans-serif;
+  top: 30px;
+  left: 75%;
 }
 
 /*Global footer styling*/
@@ -94,7 +113,7 @@ footer .linkedin-icon {
 .page-title {
   font-family: acme, sans-serif;
   text-align: center;
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 h2 {
@@ -110,15 +129,20 @@ p {
   font-family: sans-serif;
 }
 
-/*Media Query for desktops*/
-@media only screen and (min-width: 981px) and (max-width: 2800px) {
-  /*Global nav bar styling for desktop*/
-  #top-of-page-nav a {
-    font-size: 1.5rem;
+/*Media Query for tablet*/
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+  #top-of-page-nav #nav-icon {
+    width: fit-content;
+    display: block;
+    height: auto;
   }
-
-  #nav-icon {
-    width: 100%;
+}
+/*Media Query for desktop*/
+@media only screen and (min-width: 981px) and (max-width: 2800px) {
+  #top-of-page-nav #nav-icon {
+    width: max-content;
+    display: block;
+    height: auto;
   }
 }
 /*Import of global colours*/
@@ -157,19 +181,18 @@ h1 {
   text-align: middle;
 }
 #contact-info-container a {
-  text-decoration: underline;
   font-family: sans-serif;
   color: #000000;
 }
 
+#contact-text a {
+  text-decoration: underline;
+}
+
 /*Back to top button styling*/
 #back-top-button {
-  display: none;
-  width: 50%;
-  background-image: #FFF099;
-  text-align: end;
-  text-decoration: none;
-  color: #000000;
+  top: 60px;
+  left: 0%;
 }
 
 /*Parallax waves styling*/
@@ -245,8 +268,14 @@ h1 {
   }
 
   /*contact info container styling */
-  #contact-info-container h3, #contact-info-container p, #contact-info-container a {
-    width: 20rem;
+  #contact-info-container {
+    flex-flow: column nowrap;
+  }
+
+  #back-top-button {
+    left: 300px;
+    top: 70px;
+    text-align: center;
   }
 
   /*footer styling*/
@@ -265,16 +294,13 @@ h1 {
   }
 
   /*Title styling adjust for desktop*/
-  h1 {
-    display: none;
-  }
-
   /*Contact info container styling adjust for desktop*/
   #contact-info-container {
-    justify-content: space-evenly;
-    align-content: stretch;
-    height: 35%;
+    flex-flow: column nowrap;
+    display: flex;
     align-items: center;
+    padding: 5rem 4rem;
+    text-align: center;
   }
   #contact-info-container #contact-email, #contact-info-container #contact-linkedin, #contact-info-container #contact-github {
     width: 20rem;

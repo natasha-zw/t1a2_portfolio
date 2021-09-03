@@ -1,5 +1,5 @@
 /*Import of global colours*/
-@use 'style' with (
+@use '../style.scss' with (
 $primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
@@ -105,10 +105,14 @@ h1{
 
 /*Fun stuff area*/
 #fun-stuff{
-    grid-area: fun;
-    height: 30%;
-    background-color: style.$secondary-accent-color;
-    border-radius: 13% 87% 10% 90% / 83% 14% 86% 17% ;
+        grid-area: fun;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        background-color: #CAE5E4;
+        border-radius: 13% 87% 10% 90%/83% 14% 86% 17%;
+        flex-direction: column;
+        flex-wrap: wrap;
     
 
     h2{
@@ -121,20 +125,11 @@ h1{
         flex-wrap: wrap;
         justify-content: center;
         perspective: 50em;
-        
-        #cake-image, #reading-image{
-            width: 7rem;
-            padding:3px;
-            border-radius: 10px;
-            transform: rotateY(20deg);
-            box-shadow: -3px -1px 2px black;
-    
-        }
-         
     }
     p{
         margin: 3rem 2rem;
         font-size: 1.2rem;
+        
     }
 
     #stack-graph{
@@ -143,15 +138,31 @@ h1{
     }
   
 }
+.fun-card-images {
+    width: 7rem;
+    padding:3px;
+    border-radius: 10px;
+    transform: rotateY(20deg);
+    box-shadow: -3px -1px 2px black;
+}
+
+
+
 
 /*Resume button*/
 #about-page-buttons{
     grid-area: resume;
-    #resume-button{
+    
+}
+#resume-button{
         padding: 0.5rem;
+        margin-left: 1rem;
         border:dashed;
     }
-}
+
+
+
+/*Media query for tablet*/
 
 @media only screen and (min-width: 481px) and (max-width: 980px) {
 
@@ -168,13 +179,15 @@ h1{
 
     #fun-stuff{
         #stack-graph{
-            width: 30rem;
-            margin: 0 7rem;
+            width: 25rem;
+        
         }
     }
+
+    
 }
 
-
+/*Media query for desktop*/
 @media only screen and (min-width: 981px) and (max-width: 2800px){
     #introduction{
         p{
@@ -187,23 +200,32 @@ h1{
         height: 50%;
         max-width: 70rem;
         margin:  3rem auto;
+
+       
     }
     #fun-stuff{
-        #cake-image, #reading-image{
-            height: 20rem;
+
+        p{
+            padding: 0 3rem;
+        }
+        #stack-graph{
             width: 30rem;
-            
-            &:hover{
-                animation: card-select  3s infinite;
-            }
-        };
+           
+        }
+       
     }
 
-    @keyframes card-select {
-        from {transform: rotateY(20deg), translateY(0);}
-        to {transform: rotateY(-20deg), translateY(20deg);}
-      }
+    .fun-card-images:hover {
+        transform: translateY(-30px) rotateY(-20deg) perspective(0);
+        
+    }
+    
+
+   
 }
+
+
+
 
 
 

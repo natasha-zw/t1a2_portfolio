@@ -1,5 +1,5 @@
 /*Import of global colours*/
-@use 'style' with ($primary-color: #F7CEDF,
+@use '../style.scss' with ($primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
 $secondary-accent-color: #CAE5E4,
@@ -51,20 +51,23 @@ h1 {
         text-align: middle;
     }
     a {
-        text-decoration: underline;
         font-family: sans-serif;
         color: style.$paragraph-text-color;
     }
 }
 
+#contact-text{
+    a{ 
+        text-decoration: underline;
+    }
+}
+
+
 /*Back to top button styling*/
 #back-top-button{
-    display: none;
-    width: 50%;
-    background-image: style.$primary-accent-color;
-    text-align: end;
-    text-decoration: none;
-    color: style.$paragraph-text-color;
+    top: 60px;
+    left: 0%;
+    
 }
 
 /*Parallax waves styling*/
@@ -143,10 +146,15 @@ h1 {
 
     /*contact info container styling */
     #contact-info-container{
-        h3, p, a {
-            width: 20rem;
-        }
+        flex-flow: column nowrap;
+        
     
+    }
+
+    #back-top-button{
+        left: 300px;
+        top: 70px;
+        text-align: center;
     }
 
     /*footer styling*/
@@ -181,16 +189,17 @@ h1 {
     }
 
     /*Title styling adjust for desktop*/
-    h1{
-        display: none;
-    }
+    // h1{
+    //     // display: none;
+    // }
    
     /*Contact info container styling adjust for desktop*/
     #contact-info-container{
-        justify-content: space-evenly;
-        align-content: stretch;
-        height:35%;
+        flex-flow: column nowrap;
+        display: flex;
         align-items: center;
+        padding: 5rem 4rem;
+        text-align: center;        
 
         #contact-email, #contact-linkedin,#contact-github{
             width: 20rem;
