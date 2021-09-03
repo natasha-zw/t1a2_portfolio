@@ -5,3 +5,55 @@ $primary-accent-color: #FFF099,
 $secondary-accent-color: #CAE5E4,
 $paragraph-text-color: #000000);
 
+
+/* Main content styling*/
+main{
+    background-image: url("../site_images/window-aoyama-flowers.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#content-container{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.7);
+}
+
+.blog-text{
+    margin: 1rem 2rem;
+}
+/*back to top button styling*/
+#back-top-button{
+ display: block;
+ left: 0;
+ top: 0;
+ align-self: center;
+ margin: 1rem 0;
+}
+
+/*Title and subtitle styling*/
+.page-title{
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+/*media query for tablet*/
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+
+
+}
+
+/*Media Query for desktop*/
+@media only screen and (min-width: 981px) and (max-width: 2800px){
+   
+    .blog-text{
+        margin: 2rem 10rem;
+        font-size: 1.2rem;
+
+    }
+
+}

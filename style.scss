@@ -37,6 +37,7 @@ $paragraph-text-color: #000000 !default;
     width: 100vw;
     height: 7rem;
     justify-content: space-around;
+    background-color: white;
 
     
 
@@ -80,19 +81,14 @@ $paragraph-text-color: #000000 !default;
 
 #back-top-button{
     background-color: #F7CEDF;
-    height: 29px;
-    width: 50px;
     border-radius: 45%;
     text-align: center;
     border: 3px solid $paragraph-text-color;
     box-shadow: 2px 2px 1px $paragraph-text-color;
     text-decoration: none;
-    display: block;
-    position: relative;
     color: $paragraph-text-color;
     font-family: sans-serif;
-    top: 30px;
-    left: 75%;
+    padding: 0.5rem;
 }
 
 /*Global footer styling*/
@@ -164,13 +160,10 @@ p{
 
 /*Media Query for tablet*/
 @media only screen and (min-width: 481px) and (max-width: 980px) {
-   
-    #top-of-page-nav{
-        #nav-icon {
-            width: fit-content;
-            display: block;
-            height: auto;
-        }
+    #nav-icon {
+        width: fit-content;
+        display: block;
+        height: auto;
     }
 }
 
@@ -183,8 +176,6 @@ p{
             height: auto;
         }
     }
-
-
 }
 
 

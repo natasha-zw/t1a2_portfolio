@@ -4,41 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" >
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../style.css" integrity="sha512-" crossorigin="anonymous">
+    <link rel="stylesheet" href="./contact.css" integrity="sha512-" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Kanit:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="site_images/natasha-title-icon2.png">
     <title>Contact Me</title>
 </head>
 <body>
     <main id="contact-grid-container">
-        <img id="contact-banner-img" src="/site_images/korea-landscape.jpg" alt="banner image of landscape">
-        <h1 class="page-title">Contact Me</h1>
+    <div id="overlay-banner" style="background-image: url(../site_images/korea-landscape-1000.jpg)">
+            <h1 class="page-title" id="overlay-text">Contact Me</h1>
+        </div>
+        <img id="contact-banner-img" src="../site_images/korea-landscape.jpg" alt="banner image of landscape">
+         <h1 id="small-screen-title-text" class="page-title">Contact Me</h1>
         <nav id="top-of-page-nav">
-            <img id="nav-icon" src="/site_images/natasha-nav-icon100.png" alt="icon of author initials in a ring of flowers">
+            <img id="nav-icon" src="../site_images/natasha-nav-icon100.png" alt="icon of stamp of author's name">
             <ul>
                 <li> <a href="../index.html">Home</a> </li>
-                <li><a href="/about/about.html">About</a></li>
+                <li><a href="../about/about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="/blog/blog_home.html">Blog</a></li>
+                <li><a href="../blog/blog_home.html">Blog</a></li>
             </ul>
         </nav>
         <section id="contact-info-container">
             <div id="contact-text">
-                <section id="contact-email">
+                <div  id="contact-email">
                     <h3>Email</h3>
                 <p>helloworld@helloworld.com.au</p>
-                </section>
-                <section id="contact-github">
+                </div>
+                <div id="contact-github">
                     <h3>Github</h3>
                     <a href="https://github.com/natasha-zw">www.github.com/natasha-zw</a>    
-                </section>
-                <section id="contact-linkedin">
+                </div>
+                <div id="contact-linkedin">
                     <h3>LinkedIn</h3>
                     <a href="https://www.linkedin.com/in/natasha-madondo/">www.linkedin.com/in/natasha-madondo/</a>    
-                </section>
+                </div>
             </div>
-            <a id="back-top-button" href="#top-of-page-nav">Top</a>
+            <div id="button-container">
+                <a id="back-top-button" href="#overlay-banner">Top</a>  
+            </div>
         </section>
         <section id="parallax-waves">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
