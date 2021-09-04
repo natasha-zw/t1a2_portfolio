@@ -1,5 +1,5 @@
 /*Import of global colours*/
-@use 'style' with ($primary-color: #F7CEDF,
+@use '../index/style.scss' with ($primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
 $secondary-accent-color: #CAE5E4,
@@ -13,7 +13,7 @@ $paragraph-text-color: #000000);
     grid-template-areas: "top top"
                         "middle middle"
                         "bottom bottom";
-    background-image: url(/site_images/teamlab-lights-pink.jpg);
+    background-image: url(../site_images/teamlab-lights-pink.jpg);
     background-color: style.$primary-color;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,11 +25,9 @@ $paragraph-text-color: #000000);
 #title-page-component{
     grid-area: middle;
     box-shadow: 3px 5px 3px style.$primary-accent-color;
-    // border: solid 3px $primary-accent-color;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: rgba($color: white
-    , $alpha: 0.7);
+    background-color: rgba($color: white, $alpha: 0.7);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -81,6 +79,7 @@ $paragraph-text-color: #000000);
 
 /*Media Query for desktops*/
 @media only screen and (min-width: 981px) and (max-width: 2800px) {
+    /*main component styling size adjust*/
     #title-page-component{
         margin: 0 auto;
         max-width: 800px;
@@ -119,14 +118,14 @@ $paragraph-text-color: #000000);
         &:hover{
             transform: perspective(500px) translatey(-30px)translateZ(100px);
             
-         }
-         &:hover::after{
+        }
+        &:hover::after{
              opacity: 1;
              transform: translateX(-100px);
-         }
-         &:active{
+        }
+        &:active{
              background-color: style.$primary-accent-color; 
-         }
+        }
     }
     
 }
