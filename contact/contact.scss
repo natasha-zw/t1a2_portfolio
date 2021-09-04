@@ -1,5 +1,5 @@
 /*Import of global colours*/
-@use '../style.scss' with ($primary-color: #F7CEDF,
+@use '../index/style.scss' with ($primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
 $secondary-accent-color: #CAE5E4,
@@ -41,7 +41,7 @@ h1 {
     text-align: center;
     background-image: linear-gradient(to top, #fff099, #ffe5bd, #ffe8ea, #fff5ff, #ffffff);
     h3{
-        text-align: middle;
+        text-align: center;
     }
     a {
         font-family: sans-serif;
@@ -183,7 +183,7 @@ h1 {
     background-size: cover;
     display: flex;
     align-items: center;
-    text-shadow: style.textShadow(0.25, 6, style.$primary-color);
+    text-shadow: style.textShadow(0.25, 6, style.$primary-accent-color);
     }
 
     #overlay-text{

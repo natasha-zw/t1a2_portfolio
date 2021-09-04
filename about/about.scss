@@ -1,5 +1,5 @@
 /*Import of global colours*/
-@use '../style.scss' with (
+@use '../index/style.scss' with (
 $primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
@@ -31,9 +31,9 @@ p{
    
 }
 
-/*Nav and title and profile image */
+/*Nav, title and profile section */
 #header-flex-container{
-    grid-area: nav ;
+    grid-area: nav;
     height: 100%;
 }
 
@@ -168,6 +168,8 @@ h1{
 
 @media only screen and (min-width: 481px) and (max-width: 980px) {
 
+    /*margin adjustments for each section*/
+
     #introduction{
         p{
             margin: 0 3rem;
@@ -191,6 +193,7 @@ h1{
 
 /*Media query for desktop*/
 @media only screen and (min-width: 981px) and (max-width: 2800px){
+    /*margin adjustments for each section*/
     #introduction{
         p{
             margin: 0rem 9rem;
@@ -217,6 +220,7 @@ h1{
        
     }
 
+    /*hover for card images section*/
     .fun-card-images:hover {
         transform: translateY(-30px) rotateY(-20deg) perspective(0);
         

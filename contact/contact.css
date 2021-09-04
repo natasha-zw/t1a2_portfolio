@@ -178,7 +178,7 @@ h1 {
   background-image: linear-gradient(to top, #fff099, #ffe5bd, #ffe8ea, #fff5ff, #ffffff);
 }
 #contact-info-container h3 {
-  text-align: middle;
+  text-align: center;
 }
 #contact-info-container a {
   font-family: sans-serif;
@@ -305,7 +305,7 @@ h1 {
     background-size: cover;
     display: flex;
     align-items: center;
-    text-shadow: 0.25px 0.25px #F7CEDF, 0.5px 0.5px #F7CEDF, 0.75px 0.75px #F7CEDF, 1px 1px #F7CEDF, 1.25px 1.25px #F7CEDF, 1.5px 1.5px #F7CEDF, 1.75px 1.75px #F7CEDF, 2px 2px #F7CEDF, 2.25px 2.25px #F7CEDF, 2.5px 2.5px #F7CEDF, 2.75px 2.75px #F7CEDF, 3px 3px #F7CEDF, 3.25px 3.25px #F7CEDF, 3.5px 3.5px #F7CEDF, 3.75px 3.75px #F7CEDF, 4px 4px #F7CEDF, 4.25px 4.25px #F7CEDF, 4.5px 4.5px #F7CEDF, 4.75px 4.75px #F7CEDF, 5px 5px #F7CEDF, 5.25px 5.25px #F7CEDF, 5.5px 5.5px #F7CEDF, 5.75px 5.75px #F7CEDF, 6px 6px #F7CEDF;
+    text-shadow: 0.25px 0.25px #FFF099, 0.5px 0.5px #FFF099, 0.75px 0.75px #FFF099, 1px 1px #FFF099, 1.25px 1.25px #FFF099, 1.5px 1.5px #FFF099, 1.75px 1.75px #FFF099, 2px 2px #FFF099, 2.25px 2.25px #FFF099, 2.5px 2.5px #FFF099, 2.75px 2.75px #FFF099, 3px 3px #FFF099, 3.25px 3.25px #FFF099, 3.5px 3.5px #FFF099, 3.75px 3.75px #FFF099, 4px 4px #FFF099, 4.25px 4.25px #FFF099, 4.5px 4.5px #FFF099, 4.75px 4.75px #FFF099, 5px 5px #FFF099, 5.25px 5.25px #FFF099, 5.5px 5.5px #FFF099, 5.75px 5.75px #FFF099, 6px 6px #FFF099;
   }
 
   #overlay-text {
