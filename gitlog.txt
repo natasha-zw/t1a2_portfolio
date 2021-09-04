@@ -1,3 +1,33 @@
+commit f2703bbd7082230122a06344ff82830ea45ee7b2
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 16:18:19 2021 +1000
+
+    README modified
+
+commit 241e6360c95cb23209611adc0127d386ba013171
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 16:16:03 2021 +1000
+
+    README modified
+
+commit ee799a35052aa478b2971fa5b050b8526cfe8d72
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 16:14:28 2021 +1000
+
+    links and splash page screenshot modified
+
+commit 55bc9112820560aa41764d1bdeed6c275efb6a02
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 16:10:14 2021 +1000
+
+    added screenshots and links to README
+
+commit b9ba46814c075767d5c5465734c56ff7f735ef47
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 15:57:46 2021 +1000
+
+    re-organised files ffor deployment and fixed links
+
 commit 71a9562ef8f6319cbc091b8e53dac1f54cd46891
 Author: Natasha Madondo <tasha.madondo@gmail.com>
 Date:   Sat Sep 4 14:46:17 2021 +1000
