@@ -14,19 +14,29 @@ The site features;
 * parallax svg elements were used to add to the overall aesthetic,
 * and photography that was shot by me.
 
+### Links 
+(https://github.com/natasha-zw/t1a2_portfolio "Github Repo Link")
+(https://natashamadondoportfolio.netlify.app/ "Deployed site link")
+
 ### Sitemap
 ![Site Map](./docs/site_map.png)
 
 ## Screenshots
 
 #### Splash Page with hover effect 
-![Splash Page Hover](https://user-images.githubusercontent.com/82021839/132082069-c76381cc-5186-4a45-84e0-aeca8dc7a7aa.png)
+![Splash Page Hover](.docs/splash_page.png)
 
 #### Parallax effect on contact page shown in mobile view 
 ![Contact Page Mobile view](./docs/contact_parallax_mobile.png)
 
 #### Hover effect on about page image component 
 ![About Page Desktop view](./docs/about_hover_desktop.png)
+
+#### Link to Github screenshot
+![Link to Github page screenshot](./docs/github.png)
+
+#### Link to LinkedIn screenshot
+![Link to linkedin page screenshot](./docs/linkedin.png)
 
 ## Tech Stack 
 The tech stack used for this site were HTML and SCSS. The site was deployed on netlify and linked to github.  
