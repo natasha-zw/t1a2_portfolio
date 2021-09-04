@@ -148,7 +148,7 @@ p {
   max-width: 2000px;
   display: grid;
   grid-template-areas: "top top" "middle middle" "bottom bottom";
-  background-image: url(../site_images/teamlab-lights-pink.jpg);
+  background-image: url(./site_images/teamlab-lights-pink.jpg);
   background-color: #F7CEDF;
   background-repeat: no-repeat;
   background-attachment: fixed;

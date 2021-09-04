@@ -1,5 +1,5 @@
 /*Import of global colours*/
-@use '../index/style.scss' with ($primary-color: #F7CEDF,
+@use './style.scss' with ($primary-color: #F7CEDF,
 $secondary-color: #BDDDEF,
 $primary-accent-color: #FFF099,
 $secondary-accent-color: #CAE5E4,
@@ -13,7 +13,7 @@ $paragraph-text-color: #000000);
     grid-template-areas: "top top"
                         "middle middle"
                         "bottom bottom";
-    background-image: url(../site_images/teamlab-lights-pink.jpg);
+    background-image: url(./site_images/teamlab-lights-pink.jpg);
     background-color: style.$primary-color;
     background-repeat: no-repeat;
     background-attachment: fixed;

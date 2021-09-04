@@ -1,0 +1,137 @@
+commit 71a9562ef8f6319cbc091b8e53dac1f54cd46891
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 14:46:17 2021 +1000
+
+    deleted splash image
+
+commit 275fc424a65a9efb0e11040e753099663efad39d
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 14:45:20 2021 +1000
+
+    Added SRI integrity to html files and updated scss colour variable link
+
+commit b79d665940df83f44fc6eed6964d7eb914f5881b
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 14:15:13 2021 +1000
+
+    fixed README spash page screenshot
+
+commit cfe308daa6a8109eb78545e1bac483136c0d9656
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 14:13:06 2021 +1000
+
+    fixed README spash page screenshot
+
+commit c3765202e1a1a084d0439101811a4e17389203a7
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 14:09:00 2021 +1000
+
+    fixed README spash page screenshot
+
+commit ef896f07d73ea4fe74445d2ff88f125a74ee4a7d
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 14:04:55 2021 +1000
+
+    fixed README spash page screenshot
+
+commit bbe44cbf043e9de9a842204390f6c286d7457b4c
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 14:02:38 2021 +1000
+
+    fixed README spash page screenshot
+
+commit 2ab2f08c552085ded39f1172c720dac1d55ef074
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 13:57:01 2021 +1000
+
+    Added screenshots to README and to docs directory
+
+commit 4128c03897e4bab8571732846c6872f714abfd23
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 13:30:16 2021 +1000
+
+    ppt added
+
+commit 218f0307cec2c9e078dd8e668899c3d0d29d2eb3
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 13:13:04 2021 +1000
+
+    files organised
+
+commit 9c04c367d720b133fd91b8b9f7948d5a53696d14
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 12:32:17 2021 +1000
+
+    removed unnecessary files and modifed page links
+
+commit 23d73d9c689c3d8c7ec6621ad52737b6a37fcd2a
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 12:29:54 2021 +1000
+
+    removed unnecessary filed, modified links and ensured they are working
+
+commit c2b67a9e79a9eabb22298f68a14893c60bdbdf05
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Sat Sep 4 11:28:48 2021 +1000
+
+    files move to appropriate files
+
+commit 8b58426a1b021b951e123d55ca9281d5192f44d9
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Fri Sep 3 22:48:17 2021 +1000
+
+    blog pages added, back to top button edited
+
+commit 6ee462499501a10decc6c870e7239e4ee7428437
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Fri Sep 3 14:40:43 2021 +1000
+
+    added back to top button, fixed styling in about, blog and contact pages. Organised files into folders and created blog1 page and scss file.
+
+commit 7b2a9983fcb0f92c539ead44436dce81b4937b88
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Thu Sep 2 23:22:26 2021 +1000
+
+    Started styling for blog page, finishe styling for contact, added comments in all scss files for code readability and started styling for about page desktop and tablet
+
+commit 1c7b5bd9908a49a6c5bff63c390d53985fbab91d
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Thu Sep 2 16:16:22 2021 +1000
+
+    contact page created and  css  styling added
+
+commit dc67d86cf284c3f1dda0ffa724f39b517ed80bd5
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Thu Sep 2 10:39:45 2021 +1000
+
+    majority of styling for mobile version of about page done
+
+commit 8d61811eff84455cb9c6b18fa28f84ee8ee028bf
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Wed Sep 1 15:53:09 2021 +1000
+
+    added images, changed icon and changed index button hover effect
+
+commit bb79e82aa5983695c849671a2b0e2c1253210d38
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Tue Aug 31 13:38:17 2021 +1000
+
+    index.html button hover and active features added
+
+commit 28b88d595f04888f62bc461d4febd584a94fbce9
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Tue Aug 31 12:53:10 2021 +1000
+
+    responsiveness for index.html using media queries added
+
+commit 7293e1637d8ad7e6ac3534fbcb8c0bfb55b07576
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Tue Aug 31 11:58:20 2021 +1000
+
+    added main files for the site, html files, stylsheets and wireframes
+
+commit 1f5754aade1b98406fa2a1cf8cd6a51174e83867
+Author: Natasha Madondo <tasha.madondo@gmail.com>
+Date:   Tue Aug 31 11:54:20 2021 +1000
+
+    initial commit
