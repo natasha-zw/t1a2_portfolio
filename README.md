@@ -1,7 +1,7 @@
 # T1A2 Portfolio 
 
 ### Purpose
-The purpose of this site is to showcase me as an IT professional to potential employers who are the target audience.
+The purpose of this site is to showcase me as an IT professional and a web developer to potential employers. It is targeted to potential employers and other IT professionals.
 
 ### Site Features
 
@@ -19,4 +19,14 @@ The site features;
 
 ## Screenshots
 
+#### Splash Page with hover effect 
+![Splash Page desktop view](./docs/splash_page_desktop.png)
+
+#### Parallax effect on contact page shown in mobile view 
+![Contact Page Mobile view](./docs/contact_parallax_mobile.png)
+
+#### Hover effect on about page image component 
+![About Page Desktop view](./docs/about_hover_desktop.png)
+
+## Tech Stack 
 The tech stack used for this site were HTML and SCSS. The site was deployed on netlify and linked to github.  
