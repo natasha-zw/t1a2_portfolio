@@ -21,6 +21,7 @@ The site features;
 
 #### Splash Page with hover effect 
 ![Splash Page](./docs/splash_page.png)
+![Splash Page](https://user-images.githubusercontent.com/82021839/132082009-16b692d3-876a-49f5-98be-7481686166da.png)
 
 #### Parallax effect on contact page shown in mobile view 
 ![Contact Page Mobile view](./docs/contact_parallax_mobile.png)
