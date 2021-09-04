@@ -20,7 +20,7 @@ The site features;
 ## Screenshots
 
 #### Splash Page with hover effect 
-![Splash Page](./docs/splash_page_hover.png)
+![Splash Page](./docs/splash_page.png)
 
 #### Parallax effect on contact page shown in mobile view 
 ![Contact Page Mobile view](./docs/contact_parallax_mobile.png)
