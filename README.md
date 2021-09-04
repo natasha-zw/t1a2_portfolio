@@ -15,8 +15,8 @@ The site features;
 * and photography that was shot by me.
 
 ### Links 
-(https://github.com/natasha-zw/t1a2_portfolio "Github Repo Link")
-(https://natashamadondoportfolio.netlify.app/ "Deployed site link")
+[Github Repo Link](https://github.com/natasha-zw/t1a2_portfolio )
+[Deployed site link](https://natashamadondoportfolio.netlify.app/)
 
 ### Sitemap
 ![Site Map](./docs/site_map.png)
@@ -24,7 +24,7 @@ The site features;
 ## Screenshots
 
 #### Splash Page with hover effect 
-![Splash Page Hover](.docs/splash_page.png)
+![Splash Page Hover](https://user-images.githubusercontent.com/82021839/132082069-c76381cc-5186-4a45-84e0-aeca8dc7a7aa.png)
 
 #### Parallax effect on contact page shown in mobile view 
 ![Contact Page Mobile view](./docs/contact_parallax_mobile.png)
